@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en" data-theme="frost" data-mode="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e9edf1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="ZenSn0w utilises a breach in YouTube verification and moderration. It utilises a Session-Auth-Exploit which is only patchable by adding another security process">
+  <title>ZenSn0w — @checkra1n-team</title>
+  <link rel="stylesheet" href="zensn0w.css">
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true">
+    <video class="wallpaper-media" id="wallpaperVideo" src="xperia.mp4" poster="boot.png" autoplay muted loop playsinline></video>
+    <img class="wallpaper-media is-hidden" id="wallpaperImage" alt="">
+    <canvas class="snow-canvas" id="snowCanvas" aria-hidden="true"></canvas>
+  </div>
+  <div class="app-frame" id="top">
+    <aside class="sidebar">
+      <a class="brand" href="#top" aria-label="ZenSn0w home">
+        <img class="brand-mark" src="zensn0w-mark.png" alt="">
+        <span class="brand-name">ZenSn0w<span class="brand-period">✳</span><small>FORMERELY SERENITY</small></span>
+      </a>
+      <div class="sidebar-divider"></div>
+      <span class="nav-label">HUB</span>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a class="active" href="#top"><span>⌂</span>Overview</a>
+        <a href="#toolkit"><span>▦</span> Utilities</a>
+        <a href="#saved"><span>≡</span>Video Queue</a>
+        <a href="#studio"><span>◈</span>Personalization</a>
+        <a href="#channels"><span>▤</span>Updates/Messages</a>
+        <a href="#ncs-music"><span>♫</span>Music</a>
+        <a href="#request"><span>❄</span>ZenSn0w - Main</a>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="simulation-card">
+        <span class="sim-light"></span><span class="sim-heading">ZenSn0w</span>
+        <p>All rights to RA1N Groups</p>
+        <span class="sim-code">THE RA1N GROUPS</span>
+      </div>
+      <div class="sidebar-foot">ZenSn0w · BUILD 1.0</div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>ZenSn0w</span><b>/</b><strong>ZenSn0w Engine IV ™</strong></div>
+        <div class="topbar-status"><button class="quiet-toggle" id="quietToggle" type="button" aria-pressed="false"><span class="quiet-dot"></span>Resource Saver</button><button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false"><span aria-hidden="true">◐</span> Dark mode</button> </div>
+      </header>
+
+      <main class="workspace">
+        <section class="hero-panel" aria-labelledby="heroTitle">
+          <div class="hero-main">
+           <h1 id="heroTitle">Welcome to<br><span>ZenSn0w</span></h1>
+            <p>ZenSn0w is a tool that has the ability to remove YouTube channels that violated YouTubes Guidelines and Ethical Guidelines of Users.</p>
+            <div class="hero-actions"><a class="button button-primary" href="#toolkit">Open Utilities<span aria-hidden="true">↓</span></a><span class="hero-note"><span class="sparkle">✳</span> Made by <a href="https://www.youtube.com/@checkra1n-team">@checkra1n-team</a> </span></div>
+          </div>
+          <div class="hero-stats"><div><strong>32</strong><span>Channels compromsied (so far)</span></div>
+        </section>
+
+        <section class="search-panel" aria-label="YouTube quick search">
+          <div class="search-title"><span class="search-icon" aria-hidden="true">Z0</span><div><strong>Search YouTube...</strong><small>Powered by ZenSn0w Engine IV ™</small></div></div>
+          <form id="searchForm" class="search-form">
+            <label class="sr-only" for="searchQuery">Search YouTube</label>
+            <input id="searchQuery" type="search" placeholder="Search videos, channels, or topics…" autocomplete="off">
+            <button class="button button-primary search-button" type="submit">Launch YouDisk<span aria-hidden="true">↗</span></button>
+          </form>
+          <div class="search-suggestions" aria-label="Quick searches"><span>SUGGESTIONS</span><button type="button" data-query="lofi study mix">lofi study mix</button><button type="button" data-query="new music videos">new music videos</button><button type="button" data-query="creative tutorials">creative tutorials</button></div>
+        </section>
+
+        <div class="desk-grid">
+          <section class="tool-area" aria-labelledby="toolkitTitle">
+            <div class="section-heading" id="toolkit"><div> <h2 id="toolkitTitle">Utilities</h2></div><span class="section-count">   </span></div>
+            <div class="tool-grid">
+              <article class="tool-card channel-card">
+                <div class="card-topline"><span class="tool-icon icon-violet"><svg class="deck-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12Z"></path></svg></span><span class="card-index">Utility NO 1</span></div>
+                <h3>YouTube Ramdisk</h3><p>Go to a creator’s YouTube channel and browse its sections.</p>
+                <form id="channelForm" class="stack-form">
+                  <label for="channelInput">Channel handle or link</label>
+                  <div class="input-with-prefix"><span>@</span><input id="channelInput" type="text" placeholder="creator name or channel URL" autocomplete="off"></div>
+                  <div class="field-row"><div class="field-grow"><label for="channelSection">What to browse?</label><select id="channelSection"><option value="">Channel home</option><option value="videos">Videos</option><option value="shorts">Shorts</option><option value="streams">Live</option><option value="playlists">Playlists</option><option value="community">Posts</option><option value="about">About</option></select></div><button class="button button-primary field-button" type="submit">Open <span aria-hidden="true">↗</span></button></div>
+                </form>
+                <div class="card-actions"><button class="text-button" id="saveChannel" type="button">＋ Save this channel</button> </div>
+                <div class="saved-list channel-list" id="channelList" aria-label="Saved channels"></div><p class="inline-message" id="channelMessage" aria-live="polite"></p>
+              </article>
+
+              <article class="tool-card timestamp-card">
+                <div class="card-topline"><span class="tool-icon icon-blue"><svg class="deck-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><span class="card-index">Utility NO 2</span></div>
+                <h3>Timestamp Creator</h3><p>Start the video the exact second you want it to start.</p>
+                <form id="timestampForm" class="stack-form">
+                  <label for="timestampUrl">YouTube video link</label><input id="timestampUrl" type="url" placeholder="https://youtu.be/…" autocomplete="url">
+                  <span class="field-label">Start</span><div class="time-fields"><label><span class="sr-only">Hours</span><input id="timeHours" type="number" min="0" max="999" placeholder="00" inputmode="numeric"><small>HRS</small></label><b>:</b><label><span class="sr-only">Minutes</span><input id="timeMinutes" type="number" min="0" max="59" placeholder="00" inputmode="numeric"><small>MIN</small></label><b>:</b><label><span class="sr-only">Seconds</span><input id="timeSeconds" type="number" min="0" max="59" placeholder="00" inputmode="numeric"><small>SEC</small></label><button class="button button-primary field-button" type="submit">Create</button></div>
+                </form>
+                <div class="result-row is-hidden" id="timestampResult"><input id="timestampOutput" readonly aria-label="Generated timestamp link"><button class="button button-quiet" id="copyTimestamp" type="button">Copy</button></div><p class="inline-message" id="timestampMessage" aria-live="polite"></p>
+              </article>
+
+          <aside class="status-console" aria-label="Fictional simulation activity">
+            <div class="console-heading"><div> <h2>- - - ZenSn0w Present ™ - - - </h2></div><span class="console-live"><i></i>[BETA]</span></div>
+            <p class="console-caption">Here you find the most recent compromises.</p>
+            <div class="console-log"><span class="log-time">10/20/26</span><span class="log-dot"></span><div><strong>BETA RELEASE OF ZenSn0w!</strong><small>FIRST EVER RELEASE</small></div></div>
+            <div class="console-log"><span class="log-time">00/00/00</span><span class="log-dot"></span><div><strong>...</strong><small>unknown</small></div></div>
+            <div class="console-log"><span class="log-time">00/00/00</span><span class="log-dot"></span><div><strong>...</strong><small>unknown</small></div></div>
+            <div class="console-log log-muted"><span class="log-time">00/00/00</span><span class="log-dot"></span><div><strong>...</strong><small>unknown</small></div></div>
+            <div class="console-foot"><span>UP TO DATE</span> </div>
+          </aside>
+
+              <article class="tool-card thumbnail-card">
+                <div class="card-topline"><span class="tool-icon icon-pink"><svg class="deck-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg></span><span class="card-index">Utility NO 3</span></div>
+                <h3>Thumbnail Previewer</h3><p>Preview a video’s thumbnail from its YouTube link.</p>
+                <form id="thumbnailForm" class="stack-form"><label for="thumbnailUrl">YouTube video link</label><div class="field-row"><input id="thumbnailUrl" type="url" placeholder="Paste a video link…" autocomplete="url"><button class="button button-primary field-button" type="submit">Preview</button></div></form>
+                <div class="thumbnail-result is-hidden" id="thumbnailResult"><a id="thumbnailOpen" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open thumbnail image in a new tab"><img id="thumbnailImage" alt="YouTube video thumbnail preview"></a><div><strong id="thumbnailVideoId"></strong><span>Thumbnail preview</span></div><button class="icon-button" id="clearThumbnail" type="button" aria-label="Clear thumbnail preview">×</button></div><p class="inline-message" id="thumbnailMessage" aria-live="polite"></p>
+              </article>
+
+              <article class="tool-card queue-card" id="saved">
+                <div class="card-topline"><span class="tool-icon icon-gold"><svg class="deck-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></span><span class="card-index"></span></div>
+                <h3>Watch Later...</h3><p>Save Videos you might need later.</p>
+                <form id="queueForm" class="stack-form"><label for="queueUrl">YouTube video link</label><div class="field-row"><input id="queueUrl" type="url" placeholder="Paste a YouTube video link…" autocomplete="url"><button class="button button-primary field-button" type="submit">Add to Watch Later...</button></div></form>
+                <div class="saved-list" id="queueList" aria-live="polite"></div><p class="inline-message" id="queueMessage" aria-live="polite"></p>
+              </article>
+            </div>
+          </section>
+
+
+        </div>
+
+        <div class="broadcast-grid">
+          <section class="channel-panel" id="channels" aria-labelledby="channelsTitle">
+            <div class="panel-heading">
+              <div> <h2 id="channelsTitle">Messages</h2><p>Here are the Updates of ZenSn0w.</p></div>
+              </div>
+            <div class="channel-profile"><div class="channel-avatar" aria-hidden="true">Z0U</div><div><strong>ZenSn0w Updates</strong><span>Official Broadcast Channel of ZenSn0w · <b id="postCount">0 posts</b></span></div></div>
+            <form class="channel-composer" id="broadcastPostForm">
+              <label for="channelPost">Comment</label>
+              <textarea id="channelPost" maxlength="500" placeholder="What do you think?" required></textarea>
+              <div class="composer-footer"><span><span id="postChars">0</span>/500 · Saved in this browser</span><div><button class="button button-outline" id="cancelPostEdit" type="button" hidden>Cancel edit</button><button class="button button-primary" id="channelSubmitLabel" type="submit">Publish comment <span aria-hidden="true">↗</span></button></div></div>
+              <p class="inline-message" id="postFormMessage" aria-live="polite"></p>
+            </form>
+            <div class="channel-feed-heading"><strong>UPDATES</strong><span>Newest first</span></div>
+            <ol class="channel-feed" id="channelFeed" aria-label="Your channel posts"></ol>
+          </section>
+
+          <section class="music-panel" id="ncs-music" aria-labelledby="musicTitle">
+            <div class="panel-heading">
+              <div><span class="section-kicker">Audio Hub</span><h2 id="musicTitle"> Music player</h2><p>Choose a track, then play it in the official YouTube player (dodging copyright).</p></div>
+              <span class="music-badge"><i></i> ZenSn0w Engine IV ™</span>
+            </div>
+            <div class="now-playing" id="nowPlaying" role="status" aria-live="polite"><span class="equalizer" aria-hidden="true"><i></i><i></i><i></i></span><span><small id="nowPlayingState">ENGINE READY</small><strong id="nowPlayingTitle">Nothing yet</strong></span></div>
+            <div class="volume-control"><div class="volume-label"><label for="musicVolume">Music volume</label><output id="musicVolumeValue" for="musicVolume">25%</output></div><input id="musicVolume" type="range" min="0" max="100" value="25" aria-label="Music player volume" aria-valuetext="25 percent"><div class="range-captions"><span>Mute</span><span>Full</span></div></div>
+            <div class="youtube-stage"><div id="youtubePlayer" aria-label="Official YouTube music player"><span class="player-placeholder">Select a song below to load the official player.</span></div></div>
+            <p class="music-status" id="musicStatus" aria-live="polite">Choose one of the five NCS tracks to load the player. Playback starts after your selection.</p>
+            <div class="track-list" id="trackList" aria-label="NCS track list">
+              <button type="button" class="track-button" data-track="0" aria-pressed="false"><span>01</span><span><strong>Free</strong><small>Elektronomia &amp; JJD</small></span><b>▶</b></button>
+              <button type="button" class="track-button" data-track="1" aria-pressed="false"><span>02</span><span><strong>Rules</strong><small>Ascence</small></span><b>▶</b></button>
+              <button type="button" class="track-button" data-track="2" aria-pressed="false"><span>03</span><span><strong>Done</strong><small>Clarx feat. Halvorsen</small></span><b>▶</b></button>
+              <button type="button" class="track-button" data-track="3" aria-pressed="false"><span>04</span><span><strong>You Are</strong><small>Alex Holmes &amp; Dark Point</small></span><b>▶</b></button>
+              <button type="button" class="track-button" data-track="4" aria-pressed="false"><span>05</span><span><strong>Invincible</strong><small>DEAF KEV</small></span><b>▶</b></button>
+            </div>
+            <p class="music-credit">Tracks stream from official NCS YouTube uploads. Custom Music coming soon.... <a id="musicTrackLink" href="https://ncs.io/usage-policy" target="_blank" rel="noopener noreferrer">Official NCS page</a> · <a href="https://ncs.io/usage-policy" target="_blank" rel="noopener noreferrer">Usage policy</a></p>
+          </section>
+        </div>
+
+        <div class="lower-grid">
+          <section class="request-section" id="request" aria-labelledby="requestTitle">
+            <div class="request-copy"><span class="section-kicker">ZenSn0w Main</span><h2 id="requestTitle">ZenSn0w</h2><p>Report the Handle of the bot to <a href="https://www.youtube.com/@checkra1n-team">@checkra1n-team</a> and <a href="https://www.youtube.com/@serenity.stormra1n">ZenSn0w</a> </p><div class="request-note"><span aria-hidden="true">✳</span> Make sure you're pwned with :<a href="https://checkra1n-team.github.io/cryptexra1n/">cryptexra1n</a> </div></div>
+            <form class="request-form" action="https://formspree.io/f/xgavlqgr" method="POST">
+              <input type="hidden" name="_subject" value="ZenSn0w concept feedback">
+              <div class="request-fields"><label for="requestEmail"><span class="request-label-title">Your Handle:</span><input id="requestEmail" type="email" name="email" placeholder="handle@zensn0w.com"></label><label for="requestFeature"><span class="request-label-title">Their Handle:</span><input id="requestFeature" type="text" name="feature" placeholder="handle@zensn0w.com" required></label></div>
+              <label for="requestMessage">SSH Key<textarea id="requestMessage" name="message" rows="3" placeholder="Request an SSH Key from @checkra1n-team" required></textarea></label>
+              <button class="button button-primary request-submit" type="submit">Report to ZenSn0w<span aria-hidden="true">↗</span></button>
+            </form>
+          </section>
+
+          <section class="studio-section" id="studio" aria-labelledby="studioTitle">
+            <div class="studio-heading"><div><span class="section-kicker">PERSONALIZATION</span><h2 id="studioTitle">Make ZenSn0w feel like home. </h2> <p>All Media stays in your Browser</p></div><button class="button button-outline" id="resetStudio" type="button"><span aria-hidden="true">↺</span> Reset</button></div>
+            <div class="studio-grid">
+              <div class="studio-upload"><div class="upload-symbol" aria-hidden="true">✳</div><div><strong>Background</strong><span>Select an image or video from your device</span></div><label class="button button-quiet upload-button" for="backgroundFile">Select file</label><input class="sr-only" id="backgroundFile" type="file" accept="image/*,video/*"><span class="selected-file" id="selectedFile">Powered by: ZenSn0w Engine IV ™ </span></div>
+              <div class="studio-controls"><div class="control-block"><div class="control-title"><label for="blurRange">Background blur</label><output id="blurValue" for="blurRange">8 px</output></div><input id="blurRange" type="range" min="0" max="24" value="8"><div class="range-captions"><span>Sharp</span><span>Soft</span></div></div><div class="control-block"><div class="control-title"><label for="shadeRange">Backdrop shade</label><output id="shadeValue" for="shadeRange">60%</output></div><input id="shadeRange" type="range" min="15" max="85" value="60"><div class="range-captions"><span>Bright</span><span>Dark</span></div></div><div class="snow-controls"><div class="control-title"><label for="snowRange">Snowfall density</label><output id="snowValue" for="snowRange">35%</output></div><input id="snowRange" type="range" min="0" max="100" value="35"><div class="snow-actions"><button class="button button-quiet" id="snowToggle" type="button" aria-pressed="true">Anti Stress Button...</button><button class="button button-outline" id="shakeSnow" type="button">Shake...✳</button></div></div></div>
+              </div>
+          </section>
+        </div>
+        <footer class="site-footer"><a class="footer-brand" href="#top">ZenSn0w<span>✳</span></a><span>PROPERTY OF RA1N GROUPS. THIS IS AN RA1N EXCLUSIVE</span><a class="back-top" href="#top">Return to top ↑</a></footer>
+      </main>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    (function () {
+      const $ = (selector) => document.querySelector(selector);
+      const validVideoId = /^[A-Za-z0-9_-]{6,20}$/;
+      let currentObjectUrl = null;
+      let toastTimer = null;
+
+      function say(id, message, isError) {
+        const node = document.getElementById(id);
+        node.textContent = message;
+        node.classList.toggle('is-error', Boolean(isError));
+      }
+      function toast(message) {
+        const node = $('#toast');
+        node.textContent = message;
+        node.classList.add('is-visible');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => node.classList.remove('is-visible'), 2400);
+      }
+      function store(key, value) {
+        try { localStorage.setItem(key, JSON.stringify(value)); } catch (_) { toast('Browser storage is unavailable right now.'); }
+      }
+      function load(key, fallback) {
+        try {
+          let raw = localStorage.getItem(key);
+          if (raw === null && key.startsWith('zensn0w.')) raw = localStorage.getItem(key.replace('zensn0w.', 'serenity.'));
+          const value = JSON.parse(raw || 'null');
+          if (key === 'zensn0w.theme' && value !== null) return ({ aurora: 'frost', ocean: 'repo', ember: 'rose' })[value] || value;
+          return value === null ? fallback : value;
+        } catch (_) { return fallback; }
+      }
+      function videoIdFrom(input) {
+        let url;
+        try { url = new URL(input.trim()); } catch (_) { return null; }
+        const host = url.hostname.toLowerCase().replace(/^www\./, '').replace(/^m\./, '');
+        if (host === 'youtu.be') return validVideoId.test(url.pathname.split('/').filter(Boolean)[0] || '') ? url.pathname.split('/').filter(Boolean)[0] : null;
+        if (host !== 'youtube.com' && host !== 'youtube-nocookie.com') return null;
+        const parts = url.pathname.split('/').filter(Boolean);
+        let id = '';
+        if (url.pathname === '/watch') id = url.searchParams.get('v') || '';
+        else if (['shorts', 'live', 'embed', 'v'].includes(parts[0])) id = parts[1] || '';
+        return validVideoId.test(id) ? id : null;
+      }
+      function cleanVideoUrl(input) {
+        const id = videoIdFrom(input);
+        return id ? 'https://www.youtube.com/watch?v=' + id : null;
+      }
+      function channelPath(input) {
+        const raw = input.trim();
+        if (!raw) return null;
+        if (/^@?[A-Za-z0-9._-]{3,30}$/.test(raw)) return '/@' + raw.replace(/^@/, '');
+        let url;
+        try { url = new URL(/^https?:\/\//i.test(raw) ? raw : 'https://' + raw); } catch (_) { return null; }
+        const host = url.hostname.toLowerCase().replace(/^www\./, '').replace(/^m\./, '');
+        if (host !== 'youtube.com') return null;
+        const parts = url.pathname.split('/').filter(Boolean);
+        if (parts[0] && (parts[0].startsWith('@') || ['channel', 'c', 'user'].includes(parts[0]))) return '/' + parts.slice(0, parts[0].startsWith('@') ? 1 : 2).join('/');
+        return null;
+      }
+
+      const postForm = $('#broadcastPostForm');
+      const postInput = $('#channelPost');
+      let editingPostId = null;
+      function renderPosts() {
+        const feed = $('#channelFeed');
+        const savedPosts = load('zensn0w.posts', []);
+        const posts = (Array.isArray(savedPosts) ? savedPosts : []).slice().sort((a, b) => Number(b.createdAt) - Number(a.createdAt));
+        $('#postCount').textContent = posts.length + (posts.length === 1 ? ' post' : ' posts');
+        feed.replaceChildren();
+        if (!posts.length) {
+          const empty = document.createElement('li'); empty.className = 'feed-empty'; empty.textContent = 'Your channel is quiet. Publish your first update above.'; feed.append(empty); return;
+        }
+        posts.forEach((post) => {
+          const item = document.createElement('li'); item.className = 'channel-post';
+          const top = document.createElement('div'); top.className = 'post-topline';
+          const byline = document.createElement('strong'); byline.textContent = 'ZenSn0w Updates';
+          const date = document.createElement('time');
+          const created = new Date(Number(post.createdAt));
+          date.dateTime = Number.isNaN(created.getTime()) ? '' : created.toISOString();
+          date.textContent = Number.isNaN(created.getTime()) ? 'Saved post' : new Intl.DateTimeFormat(undefined, { dateStyle: 'medium', timeStyle: 'short' }).format(created);
+          top.append(byline, date);
+          const body = document.createElement('p'); body.textContent = post.text;
+          const actions = document.createElement('div'); actions.className = 'post-actions';
+          const edit = document.createElement('button'); edit.type = 'button'; edit.className = 'post-action'; edit.textContent = 'Edit';
+          edit.addEventListener('click', () => { editingPostId = post.id; postInput.value = post.text; $('#postChars').textContent = String(post.text.length); $('#channelSubmitLabel').textContent = 'Save edit'; $('#cancelPostEdit').hidden = false; postInput.focus(); });
+          const remove = document.createElement('button'); remove.type = 'button'; remove.className = 'post-action post-delete'; remove.textContent = 'Delete';
+          remove.addEventListener('click', () => { const saved = load('zensn0w.posts', []); store('zensn0w.posts', (Array.isArray(saved) ? saved : []).filter((entry) => entry.id !== post.id)); if (editingPostId === post.id) resetPostEditor(); renderPosts(); toast('Channel post deleted.'); });
+          actions.append(edit, remove); item.append(top, body, actions); feed.append(item);
+        });
+      }
+      function resetPostEditor() {
+        editingPostId = null; postForm.reset(); $('#postChars').textContent = '0'; $('#channelSubmitLabel').textContent = 'Publish post'; $('#cancelPostEdit').hidden = true;
+      }
+      postInput.addEventListener('input', () => { $('#postChars').textContent = String(postInput.value.length); });
+      postForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const text = postInput.value.trim();
+        if (!text) { postInput.focus(); return; }
+        const saved = load('zensn0w.posts', []); const posts = Array.isArray(saved) ? saved : [];
+        if (editingPostId) {
+          const target = posts.find((post) => post.id === editingPostId);
+          if (target) { target.text = text; target.updatedAt = Date.now(); }
+        } else {
+          const id = window.crypto && window.crypto.randomUUID ? window.crypto.randomUUID() : String(Date.now()) + '-' + Math.random().toString(36).slice(2, 8);
+          posts.unshift({ id, text, createdAt: Date.now() });
+        }
+        const wasEdit = Boolean(editingPostId); store('zensn0w.posts', posts.slice(0, 100)); resetPostEditor(); renderPosts(); toast(wasEdit ? 'Channel post updated.' : 'Channel post published.');
+      });
+      $('#cancelPostEdit').addEventListener('click', resetPostEditor);
+
+      const snowCanvas = $('#snowCanvas');
+      const snowContext = snowCanvas.getContext('2d');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let snowEnabled = true;
+      let snowDensity = 35;
+      let snowFlakes = [];
+      let snowFrame = 0;
+      let snowLastTime = 0;
+      let shakeTimer = null;
+      function snowIsActive() { return snowEnabled && snowDensity > 0 && !document.body.classList.contains('quiet-mode') && !reducedMotion.matches; }
+      function resizeSnow() {
+        const ratio = Math.min(window.devicePixelRatio || 1, 1.5);
+        snowCanvas.width = Math.round(window.innerWidth * ratio); snowCanvas.height = Math.round(window.innerHeight * ratio);
+        snowContext.setTransform(ratio, 0, 0, ratio, 0, 0);
+        const count = Math.round(10 + snowDensity * 0.7);
+        snowFlakes = Array.from({ length: snowDensity ? count : 0 }, () => ({ x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight, r: 1 + Math.random() * 2.4, speed: 0.35 + Math.random() * 1.2, drift: (Math.random() - 0.5) * 0.7, phase: Math.random() * Math.PI * 2 }));
+        snowLastTime = 0; drawSnow();
+      }
+      function drawSnow(time) {
+        if (snowFrame) { cancelAnimationFrame(snowFrame); snowFrame = 0; }
+        if (!snowIsActive()) { snowContext.clearRect(0, 0, window.innerWidth, window.innerHeight); return; }
+        const delta = snowLastTime ? Math.min(2.3, Math.max(0.3, (time - snowLastTime) / 16.67)) : 1; snowLastTime = time;
+        snowContext.clearRect(0, 0, window.innerWidth, window.innerHeight);
+        const shaken = document.documentElement.classList.contains('globe-shake') ? 2.5 : 1;
+        snowFlakes.forEach((flake) => {
+          flake.y += flake.speed * delta * shaken; flake.x += (flake.drift + Math.sin(time / 850 + flake.phase) * 0.24) * delta * shaken;
+          if (flake.y > window.innerHeight + 5) { flake.y = -5; flake.x = Math.random() * window.innerWidth; }
+          if (flake.x < -5) flake.x = window.innerWidth + 5; if (flake.x > window.innerWidth + 5) flake.x = -5;
+          snowContext.beginPath(); snowContext.arc(flake.x, flake.y, flake.r, 0, Math.PI * 2); snowContext.fillStyle = 'rgba(195, 238, 255, ' + (0.24 + Math.min(0.5, snowDensity / 200)) + ')'; snowContext.fill();
+        });
+        snowFrame = requestAnimationFrame(drawSnow);
+      }
+      function updateSnowUi(persist) {
+        $('#snowRange').value = String(snowDensity); $('#snowValue').value = snowDensity + '%'; $('#snowValue').textContent = snowDensity + '%';
+        const active = snowEnabled && snowDensity > 0;
+        document.documentElement.classList.toggle('snowing', active);
+        $('#snowToggle').setAttribute('aria-pressed', String(active)); $('#snowToggle').textContent = active ? 'Snowfall on' : 'Snowfall off';
+        if (persist) store('zensn0w.snow', { enabled: snowEnabled, density: snowDensity });
+        drawSnow();
+      }
+      const savedSnow = load('zensn0w.snow', { enabled: true, density: 35 });
+      snowEnabled = savedSnow.enabled !== false; snowDensity = Math.min(100, Math.max(0, Number(savedSnow.density) || 0));
+      $('#snowRange').addEventListener('input', () => { snowDensity = Number($('#snowRange').value); if (snowDensity > 0) snowEnabled = true; updateSnowUi(true); });
+      $('#snowToggle').addEventListener('click', () => { snowEnabled = !snowEnabled; if (snowEnabled && snowDensity === 0) snowDensity = 35; updateSnowUi(true); toast(snowEnabled ? 'Ooh...' : 'Nice...'); });
+      $('#shakeSnow').addEventListener('click', () => {
+        document.documentElement.classList.remove('globe-shake'); void document.documentElement.offsetWidth; document.documentElement.classList.add('globe-shake');
+        if (!snowEnabled) { snowEnabled = true; if (snowDensity === 0) snowDensity = 35; updateSnowUi(true); }
+        clearTimeout(shakeTimer); shakeTimer = setTimeout(() => document.documentElement.classList.remove('globe-shake'), 1150); toast('Easter Egg (soon...)');
+      });
+      window.addEventListener('resize', resizeSnow); reducedMotion.addEventListener('change', drawSnow);
+
+      const ncsTracks = [
+        { title: 'Free', artist: 'Elektronomia & JJD', id: '9Va88Kt0NN0', page: 'https://ncs.io/free' },
+        { title: 'Rules', artist: 'Ascence', id: 'GxobnOtrW10', page: 'https://ncs.io/rules' },
+        { title: 'Done', artist: 'Clarx feat. Halvorsen', id: 'MBN5HN3o7FE', page: 'https://ncs.io/done' },
+        { title: 'You Are', artist: 'Alex Holmes & Dark Point', id: '9qnRTwfIjE4', page: 'https://ncs.io/youare' },
+        { title: 'Invincible', artist: 'DEAF KEV', id: 'J2X5mJ3HDYE', page: 'https://ncs.io/invincible' }
+      ];
+      let selectedTrack = -1; let musicPlayer = null; let musicPlayerReady = false; let musicApiLoading = false; let previousMusicState = -1; let previousTrackId = '';
+      const savedMusicVolume = Number(load('zensn0w.musicVolume', 25));
+      let musicVolume = Number.isFinite(savedMusicVolume) ? Math.min(100, Math.max(0, savedMusicVolume)) : 25;
+      function updateMusicVolume(persist) {
+        $('#musicVolume').value = String(musicVolume);
+        $('#musicVolumeValue').value = musicVolume + '%'; $('#musicVolumeValue').textContent = musicVolume + '%';
+        $('#musicVolume').setAttribute('aria-valuetext', musicVolume + ' percent');
+        if (musicPlayerReady && musicPlayer) {
+          if (musicVolume === 0) musicPlayer.mute();
+          else { musicPlayer.unMute(); musicPlayer.setVolume(musicVolume); }
+        }
+        if (persist) store('zensn0w.musicVolume', musicVolume);
+      }
+      updateMusicVolume(false);
+      $('#musicVolume').addEventListener('input', () => { musicVolume = Number($('#musicVolume').value); updateMusicVolume(true); });
+      function setSelectedTrack(index) {
+        selectedTrack = (index + ncsTracks.length) % ncsTracks.length;
+        document.querySelectorAll('.track-button').forEach((button) => { const active = Number(button.dataset.track) === selectedTrack; button.classList.toggle('is-active', active); button.setAttribute('aria-pressed', String(active)); });
+        const track = ncsTracks[selectedTrack]; $('#nowPlayingState').textContent = 'TRACK SELECTED'; $('#nowPlayingTitle').textContent = track.title + ' — ' + track.artist; $('#musicTrackLink').href = track.page; $('#musicStatus').textContent = 'Loading ' + track.title + ' from the official NCS upload…';
+      }
+      function musicStateChanged(event) {
+        const states = window.YT && YT.PlayerState;
+        if (!states) return;
+        if (event.data === states.PLAYING) {
+          const data = musicPlayer.getVideoData(); const id = data && data.video_id;
+          const trackIndex = ncsTracks.findIndex((track) => track.id === id);
+          if (trackIndex >= 0) {
+            setSelectedTrack(trackIndex); const track = ncsTracks[trackIndex];
+            $('#nowPlayingState').textContent = 'PLAYING NOW'; $('#musicStatus').textContent = 'Playing from the official NCS YouTube upload.';
+            if (previousMusicState !== states.PLAYING || previousTrackId !== id) { toast('Playing now: ' + track.title + ' — ' + track.artist); }
+            previousTrackId = id;
+          }
+        } else if (event.data === states.PAUSED) {
+          $('#nowPlayingState').textContent = 'PAUSED'; $('#musicStatus').textContent = 'Paused. Use the official player controls to resume.';
+        } else if (event.data === states.ENDED) {
+          $('#musicStatus').textContent = 'Track finished. Choose another NCS song to continue.';
+        }
+        previousMusicState = event.data;
+      }
+      function createMusicPlayer() {
+        if (!window.YT || !YT.Player || musicPlayer) return;
+        const initial = ncsTracks[Math.max(0, selectedTrack)];
+        const playerVars = { playsinline: 1, rel: 0, enablejsapi: 1 };
+        if (window.location.protocol === 'http:' || window.location.protocol === 'https:') playerVars.origin = window.location.origin;
+        musicPlayer = new YT.Player('youtubePlayer', {
+          width: '100%', height: '225', videoId: initial.id,
+          playerVars,
+          events: {
+            onReady: (event) => { musicPlayerReady = true; if (musicVolume === 0) event.target.mute(); else { event.target.unMute(); event.target.setVolume(musicVolume); } if (selectedTrack >= 0) event.target.loadVideoById(ncsTracks[selectedTrack].id); },
+            onStateChange: musicStateChanged,
+            onAutoplayBlocked: () => { $('#musicStatus').textContent = 'Press play in the official player to start the selected track.'; },
+            onError: (event) => {
+              if (event.data === 153) {
+                $('#nowPlayingState').textContent = 'WEB ADDRESS REQUIRED';
+                $('#musicStatus').textContent = 'YouTube Error 153: the player needs an HTTP Referer. This file is opened as file://; run it from localhost or an HTTPS site to play music.';
+              } else $('#musicStatus').textContent = 'This upload could not be played here. Try its official NCS page using the link below.';
+            }
+          }
+        });
+      }
+      function loadMusicApi() {
+        if (window.location.protocol === 'file:') {
+          $('#nowPlayingState').textContent = 'WEB ADDRESS REQUIRED';
+          $('#musicStatus').textContent = 'YouTube music needs a web address. This file:// page sends no HTTP Referer (Error 153). Open it from localhost or an HTTPS site to play music.';
+          return;
+        }
+        if (window.YT && YT.Player) { createMusicPlayer(); if (musicPlayerReady && musicPlayer && selectedTrack >= 0) musicPlayer.loadVideoById(ncsTracks[selectedTrack].id); return; }
+        if (musicApiLoading) return;
+        musicApiLoading = true; window.onYouTubeIframeAPIReady = createMusicPlayer;
+        const script = document.createElement('script'); script.src = 'https://www.youtube.com/iframe_api'; script.async = true; script.onerror = () => { musicApiLoading = false; $('#musicStatus').textContent = 'Could not load the YouTube player. Use the official NCS page link below.'; }; document.head.append(script);
+      }
+      document.querySelectorAll('.track-button').forEach((button) => button.addEventListener('click', () => { setSelectedTrack(Number(button.dataset.track)); loadMusicApi(); }));
+
+      $('#searchForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        const query = $('#searchQuery').value.trim();
+        if (!query) { $('#searchQuery').focus(); return; }
+        window.open('https://www.youtube.com/results?search_query=' + encodeURIComponent(query), '_blank', 'noopener,noreferrer');
+      });
+      document.querySelectorAll('[data-query]').forEach((button) => button.addEventListener('click', () => {
+        $('#searchQuery').value = button.dataset.query;
+        $('#searchForm').requestSubmit();
+      }));
+
+      function openChannel(saveToo) {
+        const base = channelPath($('#channelInput').value);
+        if (!base) { say('channelMessage', 'Enter a YouTube @handle or a public channel link.', true); return; }
+        const section = $('#channelSection').value;
+        const url = 'https://www.youtube.com' + base + (section ? '/' + section : '');
+        window.open(url, '_blank', 'noopener,noreferrer');
+        say('channelMessage', 'Channel opened in a new tab.', false);
+        if (saveToo) saveChannel(base);
+      }
+      $('#channelForm').addEventListener('submit', (event) => { event.preventDefault(); openChannel(false); });
+      function renderChannels() {
+        const list = $('#channelList');
+        if (!list) return;
+        list.replaceChildren();
+        const items = load('zensn0w.channels', []);
+        if (!items.length) { list.innerHTML = '<span class="empty-note">Saved channels appear here.</span>'; return; }
+        items.forEach((path, index) => {
+          const row = document.createElement('div'); row.className = 'saved-item';
+          const open = document.createElement('button'); open.className = 'saved-open'; open.type = 'button'; open.textContent = path;
+          open.addEventListener('click', () => window.open('https://www.youtube.com' + path, '_blank', 'noopener,noreferrer'));
+          const remove = document.createElement('button'); remove.className = 'saved-remove'; remove.type = 'button'; remove.setAttribute('aria-label', 'Remove saved channel'); remove.textContent = '×';
+          remove.addEventListener('click', () => { const next = load('zensn0w.channels', []); next.splice(index, 1); store('zensn0w.channels', next); renderChannels(); });
+          row.append(open, remove); list.append(row);
+        });
+      }
+      function saveChannel(path) {
+        const channels = load('zensn0w.channels', []);
+        if (!channels.includes(path)) { channels.unshift(path); store('zensn0w.channels', channels.slice(0, 8)); }
+        renderChannels();
+        say('channelMessage', 'Channel saved on this device.', false);
+      }
+      $('#saveChannel').addEventListener('click', () => {
+        const path = channelPath($('#channelInput').value);
+        if (!path) { say('channelMessage', 'Enter a YouTube @handle or a public channel link first.', true); return; }
+        saveChannel(path);
+      });
+
+      $('#timestampForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        const id = videoIdFrom($('#timestampUrl').value);
+        if (!id) { say('timestampMessage', 'That does not look like a supported YouTube video link.', true); return; }
+        const hours = Math.max(0, Number($('#timeHours').value) || 0);
+        const minutes = Math.max(0, Number($('#timeMinutes').value) || 0);
+        const seconds = Math.max(0, Number($('#timeSeconds').value) || 0);
+        const total = Math.floor(hours * 3600 + minutes * 60 + seconds);
+        $('#timestampOutput').value = 'https://www.youtube.com/watch?v=' + id + '&t=' + total + 's';
+        $('#timestampResult').classList.remove('is-hidden');
+        say('timestampMessage', 'Timestamp link ready.', false);
+      });
+      $('#copyTimestamp').addEventListener('click', async () => {
+        const input = $('#timestampOutput');
+        try { await navigator.clipboard.writeText(input.value); toast('Timestamp link copied.'); }
+        catch (_) { input.select(); document.execCommand('copy'); toast('Timestamp link copied.'); }
+      });
+
+      $('#thumbnailForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        const id = videoIdFrom($('#thumbnailUrl').value);
+        if (!id) { say('thumbnailMessage', 'Paste a valid YouTube video, Shorts, or live link.', true); return; }
+        const image = $('#thumbnailImage');
+        $('#thumbnailVideoId').textContent = 'Video ' + id;
+        image.onerror = () => { image.onerror = null; image.src = 'https://img.youtube.com/vi/' + id + '/hqdefault.jpg'; $('#thumbnailOpen').href = image.src; };
+        image.onload = () => { $('#thumbnailOpen').href = image.src; };
+        image.src = 'https://img.youtube.com/vi/' + id + '/maxresdefault.jpg';
+        $('#thumbnailOpen').href = image.src;
+        $('#thumbnailResult').classList.remove('is-hidden');
+        say('thumbnailMessage', '', false);
+      });
+      $('#clearThumbnail').addEventListener('click', () => { $('#thumbnailResult').classList.add('is-hidden'); $('#thumbnailImage').removeAttribute('src'); $('#thumbnailUrl').value = ''; });
+
+      function renderQueue() {
+        const list = $('#queueList');
+        list.replaceChildren();
+        const items = load('zensn0w.queue', []);
+        if (!items.length) { const empty = document.createElement('span'); empty.className = 'empty-note'; empty.textContent = 'Your queue is empty for now.'; list.append(empty); return; }
+        items.forEach((item, index) => {
+          const row = document.createElement('div'); row.className = 'saved-item queue-item';
+          const open = document.createElement('a'); open.className = 'saved-open'; open.href = item.url; open.target = '_blank'; open.rel = 'noopener noreferrer'; open.textContent = '▶  ' + item.id;
+          const remove = document.createElement('button'); remove.className = 'saved-remove'; remove.type = 'button'; remove.setAttribute('aria-label', 'Remove video from queue'); remove.textContent = '×';
+          remove.addEventListener('click', () => { const next = load('zensn0w.queue', []); next.splice(index, 1); store('zensn0w.queue', next); renderQueue(); });
+          row.append(open, remove); list.append(row);
+        });
+      }
+      $('#queueForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        const url = cleanVideoUrl($('#queueUrl').value);
+        if (!url) { say('queueMessage', 'Paste a valid YouTube video, Shorts, or live link.', true); return; }
+        const id = new URL(url).searchParams.get('v');
+        const items = load('zensn0w.queue', []);
+        if (items.some((item) => item.id === id)) { say('queueMessage', 'That video is already in your queue.', true); return; }
+        items.unshift({ id, url }); store('zensn0w.queue', items.slice(0, 12));
+        $('#queueUrl').value = ''; say('queueMessage', 'Added to your local watch queue.', false); renderQueue();
+      });
+
+      function applyTheme(theme, persist) {
+        const valid = ['frost', 'repo', 'rose'].includes(theme) ? theme : 'frost';
+        document.documentElement.dataset.theme = valid;
+        document.querySelectorAll('.preset').forEach((button) => button.classList.toggle('active', button.dataset.theme === valid));
+        if (persist) store('zensn0w.theme', valid);
+      }
+      document.querySelectorAll('.preset').forEach((button) => button.addEventListener('click', () => applyTheme(button.dataset.theme, true)));
+      const blurRange = $('#blurRange'); const shadeRange = $('#shadeRange');
+      function updateBackdrop(persist) {
+        $('#blurValue').value = blurRange.value + ' px'; $('#blurValue').textContent = blurRange.value + ' px';
+        $('#shadeValue').value = shadeRange.value + '%'; $('#shadeValue').textContent = shadeRange.value + '%';
+        document.documentElement.style.setProperty('--wallpaper-blur', blurRange.value + 'px');
+        document.documentElement.style.setProperty('--backdrop-shade', (Number(shadeRange.value) / 100).toFixed(2));
+        if (persist) store('zensn0w.backdrop', { blur: blurRange.value, shade: shadeRange.value });
+      }
+      blurRange.addEventListener('input', () => updateBackdrop(true)); shadeRange.addEventListener('input', () => updateBackdrop(true));
+      $('#backgroundFile').addEventListener('change', (event) => {
+        const file = event.target.files && event.target.files[0];
+        if (!file) return;
+        if (!file.type.startsWith('image/') && !file.type.startsWith('video/')) { toast('Choose an image or video file.'); return; }
+        if (currentObjectUrl) URL.revokeObjectURL(currentObjectUrl);
+        currentObjectUrl = URL.createObjectURL(file);
+        const video = $('#wallpaperVideo'); const image = $('#wallpaperImage');
+        if (file.type.startsWith('video/')) {
+          image.classList.add('is-hidden'); video.classList.remove('is-hidden'); video.src = currentObjectUrl; video.load(); video.play().catch(() => {});
+        } else {
+          video.pause(); video.classList.add('is-hidden'); image.classList.remove('is-hidden'); image.src = currentObjectUrl;
+        }
+        $('#selectedFile').textContent = 'Using local file: ' + file.name;
+        toast('Background updated for this tab.');
+      });
+      $('#resetStudio').addEventListener('click', () => {
+        if (currentObjectUrl) { URL.revokeObjectURL(currentObjectUrl); currentObjectUrl = null; }
+        $('#backgroundFile').value = ''; const video = $('#wallpaperVideo'); const image = $('#wallpaperImage');
+        image.removeAttribute('src'); image.classList.add('is-hidden'); video.classList.remove('is-hidden'); video.src = 'xperia.mp4'; video.poster = 'boot.png'; video.load(); video.play().catch(() => {});
+        $('#selectedFile').textContent = 'Using ZenSn0w’s default motion background';
+        blurRange.value = 8; shadeRange.value = 60; updateBackdrop(true); applyTheme('frost', true); snowEnabled = true; snowDensity = 35; updateSnowUi(true); toast('Snowglobe reset to its default look.');
+      });
+      $('#quietToggle').addEventListener('click', () => {
+        const active = document.body.classList.toggle('quiet-mode');
+        const wallpaper = $('#wallpaperVideo');
+        $('#quietToggle').setAttribute('aria-pressed', String(active));
+        $('#quietToggle').lastChild.textContent = active ? ' Quiet mode on' : ' Quiet mode';
+        if (active) wallpaper.pause();
+        else if (!wallpaper.classList.contains('is-hidden')) wallpaper.play().catch(() => {});
+        drawSnow();
+        toast(active ? 'Quiet mode on · motion hidden' : 'Quiet mode off');
+      });
+      function setDisplayMode(mode, persist) {
+        const dark = mode === 'dark';
+        document.documentElement.dataset.mode = dark ? 'dark' : 'light';
+        $('#themeToggle').setAttribute('aria-pressed', String(dark));
+        $('#themeToggle').lastChild.textContent = dark ? ' Light mode' : ' Dark mode';
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#0d1218' : '#e9edf1';
+        if (persist) store('zensn0w.mode', dark ? 'dark' : 'light');
+      }
+      $('#themeToggle').addEventListener('click', () => {
+        setDisplayMode(document.documentElement.dataset.mode === 'dark' ? 'light' : 'dark', true);
+      });
+      setDisplayMode(load('zensn0w.mode', 'light'), false);
+
+      const savedBackdrop = load('zensn0w.backdrop', { blur: 8, shade: 60 });
+      blurRange.value = Math.min(24, Math.max(0, Number(savedBackdrop.blur) || 0));
+      shadeRange.value = Math.min(85, Math.max(15, Number(savedBackdrop.shade) || 60));
+      updateBackdrop(false); applyTheme(load('zensn0w.theme', 'frost'), false); updateSnowUi(false); resizeSnow(); renderQueue(); renderChannels(); renderPosts();
+    })();
+  </script>
+</body>
+</html>
